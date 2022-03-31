@@ -44,6 +44,7 @@ class Game {
                 echo $player->play($this->gobelet) . " " . '<br>';
             }
             echo $this->getWinner() . '<br>';
+            $this->resetTurnScore();
         }
         echo $this->getFinalWinner();
         $this->resetGame();
@@ -55,6 +56,12 @@ class Game {
     function resetGame() {
         foreach ($this->players as $player) {
             $player->reset();
+        }
+    }
+
+    function resetTurnScore() {
+        foreach ($this->players as $player) {
+            $player->setScore(0);
         }
     }
 

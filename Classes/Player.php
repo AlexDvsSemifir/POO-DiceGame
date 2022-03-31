@@ -16,6 +16,10 @@ class Player {
         return $this->score;
     }
 
+    public function setScore($score) {
+        $this->score = $score;
+    }
+
     /**
      * @param Gobelet $gobelet : Game gobelet
      */
